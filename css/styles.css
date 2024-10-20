@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    flex: 1;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    min-height: 800px;
+}
+
+section {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+
+footer p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(90deg, #6A1B9A, #AB47BC);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+button {
+    background: linear-gradient(90deg, #6A1B9A, #AB47BC);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(106, 27, 154, 0.7), 0 0 10px rgba(106, 27, 154, 0.5);
+    margin: 10px 0; /* Keep margin for spacing */
+    width: auto; /* Remove width: 90% to keep buttons in original size */
+}
+
+button:hover {
+    background: linear-gradient(90deg, #AB47BC, #6A1B9A);
+    box-shadow: 0 0 15px rgba(106, 27, 154, 0.9), 0 0 20px rgba(106, 27, 154, 0.7);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 10px;
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+        background-color: #333;
+    }
+
+    nav a:hover {
+        background-color: #AB47BC;
+        color: white;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 769px) {
+    main {
+        min-height: 1000px;
+    }
+}

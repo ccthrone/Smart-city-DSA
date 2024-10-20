@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Smart City Infrastructure Management</title>
+        <link rel="stylesheet" href="css/styles.css">  <!-- Link to external CSS file -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+    </head>
+    
+<body>
+
+<header>
+    <h1>Smart City Infrastructure Management</h1>
+    <p>Optimizing Utilities, Transportation, and Public Services for a Modern City</p>
+</header>
+
+<nav>
+    <a href="#utilities">Utilities</a>
+    <a href="#transportation">Transportation</a>
+    <a href="#public-services">Public Services</a>
+    <a href="#algorithms">Algorithms</a>
+</nav>
+
+<main>
+    <section id="utilities">
+        <h2>Utilities Management</h2>
+        <p>Efficient management of water, electricity, and waste management to ensure the city's resources are used optimally.</p>
+    </section>
+<br>
+    <section id="transportation">
+        <h2>Transportation Management</h2><br>
+        <p>Traffic optimization, public transport routing, and route planning for a seamless travel experience across the city.</p><br>
+        <button id="run-dijkstra">Run Dijkstra's Algorithm for Transportation</button><br>
+        <div id="dijkstra-output"></div><br>
+    </section>
+    <br><br>
+    <section id="public-services">
+        <h2>Public Services</h2><br>
+        <p>Public services such as waste management, healthcare, and security are constantly monitored and optimized for efficient use.</p>
+    </section>
+
+    <section id="algorithms">
+        <h2>DSA Algorithms for Optimization</h2>
+        <p>We use advanced algorithms such as Dijkstra's algorithm to find the shortest path in the transportation system, optimizing traffic flow.</p>
+        <div id="graph-visualization">
+            <canvas id="myChart"></canvas> <!-- Canvas for the graph -->
+        </div>
+    </section>
+    
+    <footer>
+        <p>Smart City Management Project by &copy; Shahid shaikh 2024</p>
+    </footer>
+    
+        <script>
+            // Sample data for the graph
+            const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+            const data = {
+                labels: labels,
+                datasets: [{
+                    label: 'Traffic Flow (Vehicles)',
+                    backgroundColor: 'rgba(106, 27, 154, 0.5)',
+                    borderColor: 'rgba(106, 27, 154, 1)',
+                    data: [65, 59, 80, 81, 56, 55, 40],
+                    fill: true,
+                }]
+            };
+        
+            const config = {
+                type: 'line', // You can change this to 'bar', 'pie', etc.
+                data: data,
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        }
+                    }
+                }
+            };
+        
+            const myChart = new Chart(
+                document.getElementById('myChart'),
+                config
+            );
+        </script>
+        
+    </section>
+</main>
+
+
+<script src="js/main.js"></script>  <!-- Link to external JS file -->
+<script src="dsa/algorithms.js"></script>  <!-- Link to DSA algorithms -->
+</body>
+</html>
